@@ -15,17 +15,16 @@ export default async function Hero() {
 
         <section className="relative flex flex-col items-center justify-center text-center py-28 px-6 text-white">
           {/* Headline */}
-          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight max-w-5xl leading-tight">
-            Read. Learn. Share. <br className="hidden md:block" />
-            Ideas That Shape the Future
+          <h1 className="text-2xl md:text-5xl font-extrabold tracking-tight max-w-3xl leading-tight ">
+             <span style={{ color: "#CF0000" }}>Dhamrai</span> Alumni Network –
+            <br className="hidden md:block" />
+           <span style={{ color: "#DECD02" }}> Connection. Collaboration. Growth.</span> 
           </h1>
 
           {/* Subheadline */}
-          <p className="mt-6 text-lg md:text-xl max-w-2xl">
-            Discover in-depth articles, tutorials, and thought-provoking stories
-            from a global network of creators. Stay updated with fresh insights
-            on technology, design, productivity, and personal growth—all in one
-            place.
+          <p className="mt-6 text-lg md:text-xl max-w-2xl"> অন্তরে
+           <span style={{ color: "#CF0000" }}>  ধামরাই</span> –পরিবর্তনের পথচলা। <br/>
+           অ্যালামনাই নেটওয়ার্ক –  <span style={{ color: "#DECD02" }}>  সংযোগ, সহযোগিতা, সমৃদ্ধি। </span> 
           </p>
 
           {/* CTA */}

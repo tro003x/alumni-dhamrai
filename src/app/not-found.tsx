@@ -12,12 +12,13 @@ export default function NotFoundPage() {
           Page not found
         </h2>
         <p className="mt-2 text-gray-500">
-          Sorry, we couldn’t find the page you’re looking for.
-        </p>
+          দুঃখিত পেজটি পাওয়া যাচ্ছে না...
+          Sorry, Page not found...
+          </p>
 
         <div className="mt-6">
           <Button asChild>
-            <Link href="/">Go Home</Link>
+            <Link href="/">ফিরে যান</Link>
           </Button>
         </div>
       </div>
