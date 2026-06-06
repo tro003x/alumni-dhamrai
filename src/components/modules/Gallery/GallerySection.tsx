@@ -9,7 +9,7 @@ export default function GallerySection() {
   ];
 
   return (
-    <section className="py-20 px-6">
+    <section className="pt-28 pb-20 px-6">
       <div className="max-w-6xl mx-auto">
         <h1 className="text-5xl font-bold mb-12 text-center">Gallery</h1>
         

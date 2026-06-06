@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 interface DropdownItem {
   label: string;
@@ -19,43 +20,54 @@ const navItems: NavItem[] = [
   {
     label: "About Us",
     items: [
-      { label: "Who we Are", href: "/about" },
-      { label: "Constitution", href: "/about" },
-      { label: "History", href: "/about" },
-      { label: "Advisory Council", href: "/about" },
-      { label: "Executive Committee", href: "/about" },
+      { label: "Who we Are", href: "/about/who-we-are" },
+      { label: "Constitution", href: "/about/constitution" },
+      { label: "History", href: "/about/history" },
+      { label: "Advisory Council", href: "/about/advisory-council" },
+      { label: "Executive Committee", href: "/about/executive-committee" },
     ],
   },
   {
     label: "Membership",
     items: [
-      { label: "Eligibility", href: "/membership" },
-      { label: "FAQ", href: "/membership" },
-      { label: "Application", href: "/membership" },
+      { label: "Eligibility", href: "/membership/eligibility" },
+      { label: "FAQ", href: "/membership/faq" },
+      { label: "Application", href: "/membership/application" },
     ],
   },
   {
     label: "Reunion / Event",
     items: [
-      { label: "Registration Process", href: "/events" },
-      { label: "Registration FAQ", href: "/events" },
+      { label: "Registration Process", href: "/events/registration-process" },
+      { label: "Registration FAQ", href: "/events/registration-faq" },
     ],
   },
   { label: "Gallery", href: "/gallery" },
   {
     label: "আমাদের ধামরাই",
     items: [
-      { label: "একটি নজরে ধামরাই", href: "/dhamrai" },
-      { label: "দক্ষিণ জাঞ্জা", href: "/dhamrai" },
-      { label: "একটি নজরে", href: "/dhamrai" },
-      { label: "সরজীব ব্যাক্তি", href: "/dhamrai" },
-      { label: "ধ্রোয়ের লিস্ট অনুসারে দক্ষিণ জাঞ্জা", href: "/dhamrai" },
+      { label: "একটি নজরে ধামরাই", href: "/dhamrai/at-a-glance" },
+      { label: "দক্ষিণ জাঞ্জা", href: "/dhamrai/south-janja" },
+      { label: "একটি নজরে", href: "/dhamrai/overview" },
+      { label: "সরজীব ব্যাক্তি", href: "/dhamrai/notable-people" },
+      { label: "ধ্রোয়ের লিস্ট অনুসারে দক্ষিণ জাঞ্জা", href: "/dhamrai/notable-list" },
     ],
   },
 ];
 
 export default function NavMenuDropdown() {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const pathname = usePathname();
+
+  const isItemActive = (item: NavItem): boolean => {
+    if (item.href) {
+      return pathname === item.href;
+    }
+    if (item.items) {
+      return item.items.some((subItem) => pathname.startsWith(subItem.href.split("/").slice(0, -1).join("/")));
+    }
+    return false;
+  };
 
   return (
     <nav className="hidden md:flex items-center gap-1">
@@ -70,12 +82,22 @@ export default function NavMenuDropdown() {
           {item.href ? (
             <Link
               href={item.href}
-              className="text-base md:text-lg px-4 py-2 hover:bg-gray-200 hover:text-black transition rounded"
+              className={`text-base md:text-lg px-4 py-2 transition rounded ${
+                isItemActive(item)
+                  ? "bg-gray-200 text-black"
+                  : "hover:bg-gray-200 hover:text-black"
+              }`}
             >
               {item.label}
             </Link>
           ) : (
-            <button className="text-base md:text-lg px-4 py-2 hover:bg-gray-200 hover:text-black transition flex items-center gap-1 rounded">
+            <button
+              className={`text-base md:text-lg px-4 py-2 transition flex items-center gap-1 rounded ${
+                isItemActive(item)
+                  ? "bg-gray-200 text-black"
+                  : "hover:bg-gray-200 hover:text-black"
+              }`}
+            >
               {item.label}
               {item.items && <span className="text-sm">▼</span>}
             </button>

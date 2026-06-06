@@ -20,9 +20,9 @@ export default function Footer() {
           {/* Left */}
           <div>
             <h2 className="text-white text-xl font-semibold mb-1">
-              Next level™
+              SAD
             </h2>
-            <p className="text-sm text-gray-400">Smart blog System</p>
+            <p className="text-sm text-gray-400">Alumni Network Dhamrai</p>
           </div>
 
           {/* Center Nav */}
@@ -46,7 +46,7 @@ export default function Footer() {
 
           {/* Right */}
           <div className="text-sm text-gray-400">
-            © {currentYear} next level team. All rights reserved.
+            © {currentYear} Made by Tro003x. All rights reserved.
           </div>
         </div>
       </div>

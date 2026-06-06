@@ -20,37 +20,37 @@ const navItems: NavItem[] = [
   {
     label: "About Us",
     items: [
-      { label: "Who we Are", href: "/about" },
-      { label: "Constitution", href: "/about" },
-      { label: "History", href: "/about" },
-      { label: "Advisory Council", href: "/about" },
-      { label: "Executive Committee", href: "/about" },
+      { label: "Who we Are", href: "/about/who-we-are" },
+      { label: "Constitution", href: "/about/constitution" },
+      { label: "History", href: "/about/history" },
+      { label: "Advisory Council", href: "/about/advisory-council" },
+      { label: "Executive Committee", href: "/about/executive-committee" },
     ],
   },
   {
     label: "Membership",
     items: [
-      { label: "Eligibility", href: "/membership" },
-      { label: "FAQ", href: "/membership" },
-      { label: "Application", href: "/membership" },
+      { label: "Eligibility", href: "/membership/eligibility" },
+      { label: "FAQ", href: "/membership/faq" },
+      { label: "Application", href: "/membership/application" },
     ],
   },
   {
     label: "Reunion / Event",
     items: [
-      { label: "Registration Process", href: "/events" },
-      { label: "Registration FAQ", href: "/events" },
+      { label: "Registration Process", href: "/events/registration-process" },
+      { label: "Registration FAQ", href: "/events/registration-faq" },
     ],
   },
   { label: "Gallery", href: "/gallery" },
   {
     label: "আমাদের ধামরাই",
     items: [
-      { label: "একটি নজরে ধামরাই", href: "/dhamrai" },
-      { label: "দক্ষিণ জাঞ্জা", href: "/dhamrai" },
-      { label: "একটি নজরে", href: "/dhamrai" },
-      { label: "সরজীব ব্যাক্তি", href: "/dhamrai" },
-      { label: "ধ্রোয়ের লিস্ট অনুসারে দক্ষিণ জাঞ্জা", href: "/dhamrai" },
+      { label: "একটি নজরে ধামরাই", href: "/dhamrai/at-a-glance" },
+      { label: "দক্ষিণ জাঞ্জা", href: "/dhamrai/south-janja" },
+      { label: "একটি নজরে", href: "/dhamrai/overview" },
+      { label: "সরজীব ব্যাক্তি", href: "/dhamrai/notable-people" },
+      { label: "ধ্রোয়ের লিস্ট অনুসারে দক্ষিণ জাঞ্জা", href: "/dhamrai/notable-list" },
     ],
   },
 ];
