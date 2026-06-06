@@ -1,13 +1,13 @@
-
 import { blogs, Blog } from "@/data/blogs";
 import { notFound } from "next/navigation";
 
-export default function BlogDetailPage({
+export default async function BlogDetailPage({
   params,
 }: {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }) {
-  const blog = blogs.find((b: Blog) => b.id === params.id);
+  const { id } = await params;
+  const blog = blogs.find((b: Blog) => b.id === id);
 
   if (!blog) return notFound();
 
