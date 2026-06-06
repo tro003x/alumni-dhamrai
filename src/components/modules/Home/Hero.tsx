@@ -33,7 +33,7 @@ export default async function Hero() {
               href="/blogs"
               className="inline-flex items-center justify-center px-8 py-4 font-medium rounded-xl border border-input hover:bg-accent hover:text-accent-foreground transition"
             >
-              Explore Blogs
+              Explore Dhamrai
             </Link>
           </div>
         </section>
