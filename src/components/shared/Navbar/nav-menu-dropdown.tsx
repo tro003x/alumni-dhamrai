@@ -2,7 +2,7 @@
 
 
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { usePathname } from "next/navigation";
 
 interface DropdownItem {

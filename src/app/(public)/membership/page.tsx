@@ -16,7 +16,7 @@ export default function MembershipPage() {
 
           <h2 className="text-3xl font-semibold mt-8">How to Apply</h2>
           <p>
-            Fill out the application form with your details and submit. You'll receive confirmation within 2-3 business days.
+            Fill out the application form with your details and submit. You&apos;ll receive confirmation within 2-3 business days.
           </p>
 
           <h2 className="text-3xl font-semibold mt-8">Benefits</h2>
